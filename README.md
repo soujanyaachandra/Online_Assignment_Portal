@@ -135,5 +135,5 @@ This project is licensed under the [License Name] - see the [LICENSE.md](LICENSE
 
 For any inquiries or issues, contact:
 
-- **[Lakshmi Soujanya Chandra]** - [lakshmisoujanyach4@gmail.com]
-- [GitHub Profile](https://github.com/soujanyaachandra)
+- **Lakshmi Soujanya Chandra** - [lakshmisoujanyach4@gmail.com]
+- GitHub Profile - [https://github.com/soujanyaachandra]

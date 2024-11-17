@@ -57,7 +57,6 @@ export class TestComponent implements OnInit {
     if (checked) {
       this.userAnswers[this.currentQuestionIndex] =
         this.userAnswers[this.currentQuestionIndex] || [];
-      this.userAnswers[this.currentQuestionIndex]?.push(option);
       if (this.userAnswers[this.currentQuestionIndex]?.push(option))
         this.selected++;
       this.answeredQuestions[this.currentQuestionIndex] = 'answered';
@@ -72,6 +71,7 @@ export class TestComponent implements OnInit {
       if (this.selected === 0)
         this.answeredQuestionsLength--;
     }
+    console.log(this.userAnswers);
   }
 
   onKeyUp(event: any) {

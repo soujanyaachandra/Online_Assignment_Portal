@@ -103,7 +103,7 @@
       <div *ngFor="let question of questions; let i = index">
         <h3>{{ i + 1 }}. {{ question.question }}</h3>
         <div class="p-4 pt-0 pb-0">
-          <p><b>Your answer:</b> {{ userAnswers[i] }}</p>
+          <p class="pt-2"><b>Your answer:</b> {{ userAnswers[i] }}</p>
           <p><b>Correct answer:</b> {{ question.answer }}</p>
           <p><b>Explanation:</b> {{ question.explanation }}</p>
         </div>

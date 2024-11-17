@@ -3,10 +3,10 @@
 ## Overview
 
 An online assessment portal which supports different types of questions as follows:
-    - Single-answer MCQs
-    - Multiple-answer selection
-    - Fill-in-the-blank
-    - Yes/No questions
+- Single-answer MCQs
+- Multiple-answer selection
+- Fill-in-the-blank
+- Yes/No questions
 Built with scalability and maintainability in mind.
 
 ---

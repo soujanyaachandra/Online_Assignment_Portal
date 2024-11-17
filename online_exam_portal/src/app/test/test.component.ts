@@ -71,7 +71,6 @@ export class TestComponent implements OnInit {
       if (this.selected === 0)
         this.answeredQuestionsLength--;
     }
-    console.log(this.userAnswers);
   }
 
   onKeyUp(event: any) {

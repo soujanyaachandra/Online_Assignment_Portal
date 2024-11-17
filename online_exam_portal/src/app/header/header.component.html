@@ -1,0 +1,21 @@
+<div class="header-navbar">
+  <mat-toolbar>
+    <img src="../../assets/icons/logo.svg" width="100" height="100">
+    <span class="tool-bar-gap"></span>
+    <div class="user-name">
+      <span>Welcome {{ userName }}</span>
+    </div>
+    <span class="tool-bar-space"></span>
+    <div class="user-detail-container" [matMenuTriggerFor]="logoutMenu">
+      <img src="././assets/images/avatar.jpg" class="avatar-img" alt="Avatar" />
+      <div>
+        <mat-menu #logoutMenu="matMenu">
+          <button mat-menu-item (click)="logOut()">
+            <img src="assets/icons/logout.svg" alt="Log out" />
+            Logout
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+  </mat-toolbar>
+</div>

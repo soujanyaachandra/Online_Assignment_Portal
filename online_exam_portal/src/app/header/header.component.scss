@@ -1,0 +1,40 @@
+.header-navbar {
+  margin: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.user-name {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: #003f65;
+  white-space: nowrap;
+}
+
+.user-detail-container {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.tool-bar-gap {
+  flex: 1 1 auto;
+}
+
+.tool-bar-space {
+  margin-right: 20px;
+}
+
+.avatar-img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50em;
+  cursor: pointer;
+}

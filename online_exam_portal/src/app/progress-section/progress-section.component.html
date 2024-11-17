@@ -1,0 +1,19 @@
+<div class="container-fluid container-sec">
+  <div class="dropdown-section">
+    <div class="col-md-9">
+      <label class="label-text" for="questionsCount">Questions Answered:
+      </label>
+      <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" [style.width.%]="progress" aria-valuemin="0"
+          aria-valuemax="100">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 time-section">
+      <div class="timer" [ngClass]="timerClass">
+        <h4><b>Time Remaining</b></h4>
+        <p [ngClass]="timerClass">{{ getFormattedTime() }}</p>
+      </div>
+    </div>
+  </div>
+</div>

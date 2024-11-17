@@ -1,0 +1,166 @@
+[
+  {
+    "question": "What is Angular?",
+    "options": [
+      "A programming language",
+      "A front-end web framework",
+      "A mobile app development platform",
+      "A back-end server technology"
+    ],
+    "answer": "A front-end web framework",
+    "type": "single",
+    "explanation": "Angular is a TypeScript-based open-source front-end web framework. It is used for building dynamic, single-page applications (SPAs) and can also be used for creating progressive web apps and mobile apps."
+  },
+  {
+    "question": "Which of the following are programming languages?",
+    "options": [
+      "HTML",
+      "JavaScript",
+      "CSS",
+      "Python"
+    ],
+    "answer": [
+      "JavaScript",
+      "Python"
+    ],
+    "type": "multiple",
+    "explanation": "JavaScript and Python are programming languages."
+  },
+  {
+    "question": "What are the two main types of components in React.js?",
+    "options": [
+      "Class based and functional",
+      "Functional and stateful",
+      "UI and container",
+      "Presentational and container"
+    ],
+    "answer": "Class based and functional",
+    "type": "single",
+    "explanation": "React has two main types of components: Class based and functional. Class components are ES6 classes that extend from React.Component, and functional components are simpler functions that return JSX."
+  },
+  {
+    "question": "What is data binding in Angular?",
+    "options": [
+      "A way to bind data to HTML elements",
+      "A technique to update the model based on user input",
+      "A method to synchronize data between the view and the component",
+      "A way to bind data to Services"
+    ],
+    "answer": [
+      "A way to bind data to HTML elements",
+      "A technique to update the model based on user input",
+      "A method to synchronize data between the view and the component"
+    ],
+    "type": "multiple",
+    "explanation": "Data binding in Angular is a mechanism that allows you to synchronize data between the view (HTML) and the component (TypeScript). It provides a way to bind data to HTML elements, update the model based on user input, and keep the view and component in sync."
+  },
+  {
+    "question": "Can we update the React elements once they are rendered?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "No",
+    "type": "yesno",
+    "explanation": "React elements are immutable. Once you create an element, you can’t change its children or attributes. If you want to update the UI, you have to create a new element."
+  },
+  {
+    "question": "A React component takes in parameters called ______.",
+    "options": [],
+    "answer": "Props",
+    "type": "fill",
+    "explanation": "Props (short for properties) are inputs to a React component. They are single values or objects containing a set of values that are passed to components on creation and fixed throughout the component's lifecycle."
+  },
+  {
+    "question": "Which CSS framework is mostly used in Angular?",
+    "options": [
+      "Semantic UI",
+      "Foundation",
+      "Bootstrap",
+      "SASS"
+    ],
+    "answer": "Bootstrap",
+    "type": "single",
+    "explanation": "Bootstrap is the framework used for alignment and styles for developing UI"
+  },
+  {
+    "question": "We can apply multiple structural directives to a host element.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": "True",
+    "type": "yesno",
+    "explanation": "The sky appears blue due to Rayleigh scattering."
+  },
+  {
+    "question": "To write HTML in react we make use of ______.",
+    "options": [],
+    "answer": "JSX",
+    "type": "fill",
+    "explanation": "JSX stands for JavaScript XML. It allows us to write HTML in React. JSX makes it easier to write and add HTML in React."
+  },
+  {
+    "question": "Which of the following properties is used to change the font of text?",
+    "options": [
+      "font-family",
+      "font-size",
+      "text-align",
+      "None of the above"
+    ],
+    "answer": "font-family",
+    "type": "single",
+    "explanation": "The font-family property is used to change text font in HTML"
+  },
+  {
+    "question": "What does the 'let' keyword in JavaScript do?",
+    "options": [
+      "Declares a global variable",
+      "Declares a block-scoped variable",
+      "Declares a constant variable",
+      "Declares a function"
+    ],
+    "answer": "Declares a block-scoped variable",
+    "type": "single",
+    "explanation": "The 'let' keyword is used to declare variables that are block-scoped, meaning they are only accessible within the block in which they are defined."
+  },
+  {
+    "question": "JS stands for ______.",
+    "options": [],
+    "answer": "JavaScript",
+    "type": "fill",
+    "explanation": "Js stands for JavaScript"
+  },
+  {
+    "question": "Can a component modify its own props?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "No",
+    "type": "yesno",
+    "explanation": "Components must act like pure functions with respect to their props. They cannot modify their own props but can modify their state."
+  },
+  {
+    "question": "Which method is used to add an item to the end of an array in JavaScript?",
+    "options": [
+      "push()",
+      "pop()",
+      "shift()",
+      "unshift()"
+    ],
+    "answer": "push()",
+    "type": "single",
+    "explanation": "The 'push()' method is used to add one or more elements to the end of an array and returns the new length of the array."
+  },
+  {
+    "question": "If a component returns null, are its lifecycle methods still called?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "type": "fill",
+    "explanation": "Returning null from a component’s render method does not affect the firing of the component’s lifecycle methods. Lifecycle methods like componentDidUpdate will still be called."
+  }
+]

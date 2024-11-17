@@ -1,0 +1,135 @@
+<app-progress-section *ngIf="!testSubmitted" (timeCompleted)="timeCompleted($event)" [totalQuestions]="questions.length"
+  [userAnswersLength]="answeredQuestionsLength"></app-progress-section>
+<div *ngIf="!showResults" class="flex-containers">
+  <div class="col-md-9">
+    <div class="container-fluid container-sec">
+      <div class="dropdown-section">
+        <div class="card-body">
+          <h4 class="question">
+            {{ questions[currentQuestionIndex]?.question }}
+          </h4>
+          <div *ngIf="questions[currentQuestionIndex]?.type === 'single'">
+            <div *ngFor="let option of questions[currentQuestionIndex]?.options">
+              <input type="radio" [value]="option" [checked]="userAnswers[currentQuestionIndex] === option"
+                (change)="selectAnswer(option)" />
+              {{ option }}
+            </div>
+          </div>
+
+          <div *ngIf="questions[currentQuestionIndex]?.type === 'multiple'">
+            <div *ngFor="let option of questions[currentQuestionIndex].options">
+              <input type="checkbox" [value]="option" [checked]="userAnswers[currentQuestionIndex]?.includes(option)"
+                (change)="onCheckboxChange($event, option)" />
+              {{ option }}
+            </div>
+          </div>
+
+          <div *ngIf="questions[currentQuestionIndex]?.type === 'fill'">
+            <input type="text" [(ngModel)]="userAnswers[currentQuestionIndex]" placeholder="Your answer "
+              (keyup)="onKeyUp($event)" />
+          </div>
+
+          <div *ngIf="questions[currentQuestionIndex]?.type === 'yesno'">
+            <input type="radio" [value]="'True'" [checked]="userAnswers[currentQuestionIndex] === 'True'"
+              (change)="selectAnswer('True')" />
+            True
+            <input type="radio" [value]="'False'" [checked]="userAnswers[currentQuestionIndex] === 'False'"
+              (change)="selectAnswer('False')" />
+            False
+          </div>
+        </div>
+        <div class="pr-2 button-style">
+          <button (click)="markForReview()" class="btn btn-danger bt-btn-clearall">
+            {{
+            questions[currentQuestionIndex]?.review
+            ? "UnMark Review"
+            : "Mark for Review"
+            }}
+          </button>
+          <button (click)="previousQuestion()" class="previous-next-button" [disabled]="currentQuestionIndex === 0">
+            Previous
+          </button>
+          <button (click)="nextQuestion()" class="previous-next-button"
+            [disabled]="currentQuestionIndex === questions.length - 1">
+            Next
+          </button>
+          <button (click)="openSubmitConfirmDialog()" class="btn btn-success bt-btn ml-2">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 section-class">
+    <div class="section2">
+      <div class="container-fluid container-sec">
+        <div class="nav-section questions-section">
+          <div *ngFor="let question of questions; let i = index" class="question-circle" [class]="getQuestionStatus(i)"
+            (click)="goToQuestion(i)">
+            {{ i + 1 }}
+          </div>
+          <div *ngFor="let point of colorValidation">
+            <span class="color-box" [ngStyle]="{'background-color': point.color}"></span>
+            {{ point.text }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1" [ngStyle]="{ display: display }" id="exampleModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h3>Thank You!</h3>
+        <p>
+          Your test have been submitted successfully.<br />
+          Click "OK" to view results.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="onCloseHandled()">
+          OK
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showResults" class="flex-containers">
+  <div class="col-md-9 container-fluid container-sec">
+    <div class="dropdown-section">
+      <div *ngFor="let question of questions; let i = index">
+        <h3>{{ i + 1 }}. {{ question.question }}</h3>
+        <div class="p-4 pt-0 pb-0">
+          <p><b>Your answer:</b> {{ userAnswers[i] }}</p>
+          <p><b>Correct answer:</b> {{ question.answer }}</p>
+          <p><b>Explanation:</b> {{ question.explanation }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 container-fluid container-sec">
+    <div class="resultContainer">
+      <app-donut [resultData]="resultData"></app-donut>
+      <p>
+        Your score: <b>{{ score }}</b> out of <b>{{ questions.length }}</b>
+      </p>
+      <div [ngStyle]="{ color: passFail === 'Passed' ? 'green' : 'red' }">
+        <p>
+          <b>You {{ passFail }} !!</b>
+        </p>
+      </div>
+      <p>
+        Answered: <b>{{ answered }}</b>
+      </p>
+      <p>
+        Not Answered: <b>{{ unanswered }}</b>
+      </p>
+      <p>
+        Correctly Answered: <b>{{ score }}</b>
+      </p>
+    </div>
+  </div>
+</div>

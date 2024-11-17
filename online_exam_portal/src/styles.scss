@@ -1,0 +1,12 @@
+@import url("assets/styles/button.scss");
+@import url("assets/styles/textfield.scss");
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.mat-toolbar {
+  background: none !important;
+}
+
+sup {
+  color: red;
+}

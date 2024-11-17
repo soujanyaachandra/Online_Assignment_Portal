@@ -1,0 +1,62 @@
+<div class="flex-container pt-4">
+  <label for="userName">
+    <h4>Please enter your Name to display on Test Screen</h4>
+  </label>
+  <mat-form-field class="col-md-5" appearance="outline">
+    <mat-label>Your Name</mat-label>
+    <input type="text" matInput [(ngModel)]="userName" />
+  </mat-form-field>
+</div>
+
+<div class="instructions-page">
+  <h4>Guidelines to Online Test</h4>
+  <ol>
+    <li>Stable Internet Connectivity is a must.</li>
+    <li>Giving the test on a Laptop or Desktop is recommended.</li>
+    <li>It is recommended to use web browsers such as Chrome, Mozilla, etc.</li>
+    <li>You will have a total of 15 minutes to complete the test.</li>
+    <li>
+      After logging in, you must enter your name to display on the test screen.
+    </li>
+    <li>
+      When the test screen opens, you can find the questions that you need to
+      answer.
+    </li>
+    <li>On the right side, you can see the question numbers.</li>
+    <li>Using those numbers, you can navigate between the questions.</li>
+    <li>
+      The different colors added to each question number are explained below:
+      <ul>
+        <li><span class="color-box grey"></span> Unvisited Question</li>
+        <li><span class="color-box blue"></span> Current Question</li>
+        <li><span class="color-box orange"></span> Visited but not Answered</li>
+        <li><span class="color-box green"></span> Answered</li>
+        <li><span class="color-box red"></span> Mark for Review</li>
+      </ul>
+    </li>
+    <li>
+      On top, you can see the progress bar which displays the number of
+      questions answered by you.
+    </li>
+    <li>
+      You can also see the timer which starts running when the test begins.
+    </li>
+    <li>
+      You can submit the test on your own by clicking the Submit button and see
+      your score.
+    </li>
+    <li>
+      If you didn’t submit the test within the given time, the browser will
+      automatically submit all your answers and show your score.
+    </li>
+    <li>The pass percentage for the test is at least 70%.</li>
+    <li>
+      You must get a 70% score to pass the test, or it will be considered a
+      fail.
+    </li>
+  </ol>
+  <button class="submit-button" [disabled]="!userName" (click)="onClickOfSubmit()"
+    [matTooltip]="!userName ? 'Please enter your name to Start Test' : ''">
+    Start Test
+  </button>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="confirm-section" *ngIf="dialogType === 'confirm'">
+    <button class="dialog--button__close" (click)="onClickOfClose()">
+      <img src="assets/icons/dialog-close.svg" class="dialog--button--img__size" alt="Close" />
+    </button>
+    <span class="confirm-text">
+      {{ headerText }}
+    </span>
+  </div>
+  <div class="dialog__confirm__message" #messageText></div>
+  <mat-dialog-actions>
+    <div class="col-md-12 additional-info">
+      <button *ngIf="actionButtonText" class="add-button close-button" (click)="onActionClick()">
+        {{ actionButtonText }}
+      </button>
+      <button *ngIf="cancelActionButton" class="back-btn cancel-button" (click)="onClickOfClose('back')">
+        {{ cancelActionButton }}
+      </button>
+      <button *ngIf="closeButton" class="close-button"
+        [ngClass]="dialogType === 'error' ? 'error-button' : 'success-button'" (click)="onClickOfClose()">
+        {{ closeButton }}
+      </button>
+    </div>
+  </mat-dialog-actions>
+</div>

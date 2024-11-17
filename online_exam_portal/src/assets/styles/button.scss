@@ -1,0 +1,128 @@
+.submit-button {
+  align-items: flex-start !important;
+  padding: 0px 30px !important;
+  width: auto !important;
+  height: 42px !important;
+  background: #00b589 !important;
+  border-radius: 0px !important;
+  border: none !important;
+  color: white !important;
+  font-size: 20px;
+  cursor: pointer !important;
+}
+
+.submit-button:disabled {
+  align-items: flex-start !important;
+  padding: 0px 30px !important;
+  width: auto !important;
+  height: 42px !important;
+  background: #88aea4 !important;
+  border: none !important;
+  color: #ffffff !important;
+  outline: none !important;
+  cursor: not-allowed !important;
+}
+
+.add-button {
+  align-items: flex-start !important;
+  padding: 0px 30px !important;
+  width: auto !important;
+  height: 42px !important;
+  background: #5795bb !important;
+  border-radius: 0px !important;
+  border: none !important;
+  color: white !important;
+  font-family: NissanProMedium, sans-serif;
+}
+
+.add-button:disabled {
+  align-items: flex-start !important;
+  padding: 0px 30px !important;
+  width: auto !important;
+  height: 42px !important;
+  background: white !important;
+  border-radius: 0px !important;
+  border: 1px solid #5795bb !important;
+  color: #5795bb !important;
+  outline: none !important;
+  cursor: not-allowed !important;
+  font-family: NissanProMedium, sans-serif;
+  opacity: 0.5 !important;
+}
+
+button:not([disabled]).add-button:hover {
+  background-color: #1f6a99 !important;
+  outline: none !important;
+  font-family: NissanProMedium, sans-serif;
+}
+
+button:not([disabled]).add-button:focus {
+  background-color: #5795bb !important;
+  border-color: #5795bb !important;
+  outline: none !important;
+  font-family: NissanProMedium, sans-serif;
+}
+
+.back-btn {
+  align-items: flex-start !important;
+  padding: 0px 30px !important;
+  width: auto !important;
+  height: 42px !important;
+  background: white !important;
+  color: #5795bb !important;
+  border-radius: 40px !important;
+  border: 2px solid #5795bb !important;
+  font-family: NissanProMedium, sans-serif;
+}
+
+.back-btn:disabled {
+  align-items: flex-start !important;
+  padding: 0px 30px !important;
+  width: auto !important;
+  height: 42px !important;
+  background: white !important;
+  border-radius: 40px !important;
+  border: 1px solid #5795bb !important;
+  color: #5795bb !important;
+  outline: none !important;
+  cursor: not-allowed !important;
+  font-family: NissanProMedium, sans-serif;
+  opacity: 0.5 !important;
+}
+
+button:not([disabled]).back-btn:hover {
+  background-color: #5795bb !important;
+  border-color: #5795bb !important;
+  color: white !important;
+  outline: none !important;
+  font-family: NissanProMedium, sans-serif;
+}
+
+button:not([disabled]).back-btn:focus {
+  background-color: #5795bb !important;
+  border-color: #5795bb !important;
+  color: white !important;
+  outline: none !important;
+  font-family: NissanProMedium, sans-serif;
+}
+
+.previous-next-button {
+  background: #ffffff;
+  border: 1px solid #6400aa;
+  border-radius: 5px;
+  padding: 2px 15px;
+  color: #6400aa;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.previous-next-button:disabled {
+  background: #ffffff;
+  border: 1px solid #6400aa;
+  border-radius: 5px;
+  padding: 2px 15px;
+  color: #6400aa;
+  margin-right: 10px;
+  opacity: 0.5;
+  cursor: not-allowed !important;
+}

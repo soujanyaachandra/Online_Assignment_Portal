@@ -1,0 +1,65 @@
+.dialog__confirm__message {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  color: #000000;
+  overflow-wrap: break-word;
+  letter-spacing: 0;
+  opacity: 1;
+  align-self: center;
+  padding: 20px 10px 0px 10px;
+  height: 80px;
+}
+
+.dialog--button--img__size {
+  height: 13px;
+  width: 13px;
+}
+
+.dialog--button__close {
+  border: none;
+  outline: none;
+  color: transparent;
+  background-color: transparent;
+  position: absolute;
+  right: 2px;
+}
+
+.dialog--button__close:focus {
+  outline: none;
+}
+
+.close-button {
+  text-align: center !important;
+  border-radius: 40px !important;
+  margin-top: 8px !important;
+}
+
+.additional-info {
+  text-align: center !important;
+  margin-bottom: 10px !important;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+
+.confirm-section {
+  height: 50px;
+  background: #003f65;
+  text-align: center;
+}
+
+.confirm-text {
+  color: #ffffff;
+  font-size: 20px;
+  position: relative;
+  top: 10px;
+}
+
+.cancel-button {
+  margin-left: 20px;
+}
